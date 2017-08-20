@@ -1,9 +1,9 @@
 <?php 
 	require_once("config.php");
 
-	$sql = new Sql();
+	$thais = new Usuario();
 
-	$usuarios = $sql->select("SELECT *FROM tb_usuarios");
+	$thais->loadById(2);
 
-	echo json_encode($usuarios);
+	echo $thais;
  ?>
